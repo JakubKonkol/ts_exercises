@@ -1,13 +1,15 @@
 import { dodajNowegoPracownika, dodajPracownika, dodajPracownikówZListy, zwolnijPracownika } from "./pracownicy.js";
 import { generujRaport } from "./raporty.js";
+import {Stanowisko} from "./types/otherTypes.js";
+import {Pies, Pracownik} from "./types/pracownikTypes.js";
 
-export const listaPracowników = [];
+export const listaPracowników: Pracownik[] = [];
 
 const paniBasia = {
     id: 0,
     imie: "Basia",
     nazwisko: "Kowalska",
-    stanowisko: "Księgowa",
+    stanowisko: Stanowisko.pani_basia,
     //pensja: ??,
     graNaSkrzypcach: "pięknie",
     bezNiejTenZakładUpadnie: true
